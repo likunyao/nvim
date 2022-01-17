@@ -1,0 +1,4 @@
+{
+  "diagnostic.warningSign": ">>",
+  "coc.preferences.formatOnSaveFiletypes": ["markdown", "json"]
+}
