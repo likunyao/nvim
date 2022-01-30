@@ -34,9 +34,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " git辅助插件
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " 注释插件
 Plug 'preservim/nerdcommenter'
+
+" 文档插件
+Plug 'vim-scripts/DoxygenToolkit.vim'
 
 call plug#end()
 filetype plugin indent on
@@ -69,6 +73,8 @@ let g:airline_theme = 'gruvbox_material'
 "let g:airline#extensions#tabline#enabled=1
 " 显示行号
 set number
+" 交换文件落盘时间
+set updatetime=100
 " 自动重载配置文件
 autocmd! bufwritepost ~/.config/nvim/init.vim source ~/.config/nvim/init.vim
 " 语法高亮显示
@@ -97,6 +103,14 @@ endif
 " 更改到当前文件所在目录
 autocmd BufEnter * lcd %:p:h
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" DoxygenToolkit配置
+let g:DoxygenToolkit_authorName = "likunyao(likunyao@bigo.sg)"
+let g:DoxygenToolkit_licenseTag = "Copyright (c) 2022-present BIGO TECHNOLOGY PTE. LTD.\<enter>"
+let g:DoxygenToolkit_licenseTag = g:DoxygenToolkit_licenseTag . "License: ALL RIGHTS RESERVED.\<enter>"
+let g:DoxygenToolkit_licenseTag = g:DoxygenToolkit_licenseTag . "Author: likunyao(likunyao@bigo.sg)"
+nnoremap <leader><leader>d :Dox<cr>
 
 
 " treesitter配置
