@@ -42,6 +42,9 @@ Plug 'preservim/nerdcommenter'
 " 文档插件
 Plug 'vim-scripts/DoxygenToolkit.vim'
 
+" 时间统计
+Plug 'wakatime/vim-wakatime'
+
 call plug#end()
 filetype plugin indent on
 " 插件结束位置
