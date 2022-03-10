@@ -166,8 +166,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " 跳转错误
-nmap <silent> gN <Plug>(coc-diagnostic-prev)
-nmap <silent> gn <Plug>(coc-diagnostic-next)
+nmap <silent> eN <Plug>(coc-diagnostic-prev)
+nmap <silent> en <Plug>(coc-diagnostic-next)
 " AutoFix
 nmap <leader>qf <Plug>(coc-fix-current)
 " 查看文档
@@ -184,6 +184,16 @@ endfunction
 " 重命名
 nmap <leader>rn <Plug>(coc-rename)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+
+
+" vim-gitgutter配置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 跳转Hunk
+nmap hn <Plug>(GitGutterNextHunk)
+nmap hN <Plug>(GitGutterPrevHunk)
+" 折叠没有修改的代码
+nmap <leader>gf :GitGutterFold<cr>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 " vim-clang-format配置
