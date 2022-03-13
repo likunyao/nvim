@@ -9,7 +9,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 
 " 树形目录
-Plug 'scrooloose/nerdtree'
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 
 " 括号和引号自动补全
 Plug 'jiangmiao/auto-pairs'
@@ -189,8 +190,8 @@ nmap <leader>rn <Plug>(coc-rename)
 " vim-gitgutter配置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 跳转Hunk
-nmap hn <Plug>(GitGutterNextHunk)
-nmap hN <Plug>(GitGutterPrevHunk)
+nmap <leader>hn <Plug>(GitGutterNextHunk)
+nmap <leader>hN <Plug>(GitGutterPrevHunk)
 " 折叠没有修改的代码
 nmap <leader>gf :GitGutterFold<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -205,10 +206,18 @@ autocmd FileType c,cpp,objc,proto ClangFormatAutoEnable
 
 " NerdTree配置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 快捷键F2
-map <F2> :NERDTreeToggle<CR>
-" 忽略文件类型
-let NERDTreeIgnore = ['\~$', '\.pyc$', '\.swp$']
+lua <<EOF
+require'nvim-tree'.setup {
+    filters = {
+        dotfiles = false,
+        custom = {"*.pyc", "*.swp"}
+        },
+    }
+EOF
+" 快捷键F2打开
+nnoremap <F2> :NvimTreeToggle<CR>
+" 刷新文件列表
+nnoremap <leader><leader>r :NvimTreeRefresh<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
