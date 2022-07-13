@@ -55,5 +55,7 @@ packer.startup({
       "neoclide/coc.nvim",
       branch = "release",
     })
+    -- gitsigns
+    use("lewis6991/gitsigns.nvim")
   end
 })
