@@ -7,6 +7,6 @@ end
 nvim_tree.setup({
   filters = {
     dotfiles = false,
-    custom = {"*.pyc", "*.swp", ".git"}
+    custom = {"*.pyc", "*.swp", ".git", ".cache"}
   },
 })
