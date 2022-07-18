@@ -57,5 +57,7 @@ packer.startup({
     })
     -- gitsigns
     use("lewis6991/gitsigns.nvim")
+    -- wakatime
+    use("wakatime/vim-wakatime")
   end
 })
