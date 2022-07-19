@@ -1,6 +1,6 @@
 {
   "diagnostic.warningSign": ">>",
-  "coc.preferences.formatOnSaveFiletypes": ["markdown", "json", "python"],
+  "coc.preferences.formatOnSaveFiletypes": ["json", "python", "cpp"],
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd",
   "python.formatting.provider": "yapf"
 }
