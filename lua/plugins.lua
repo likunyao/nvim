@@ -64,5 +64,7 @@ packer.startup({
       "nvim-lualine/lualine.nvim",
       requires = { "kyazdani42/nvim-web-devicons" },
     })
+    -- autopairs
+    use("windwp/nvim-autopairs")
   end
 })
