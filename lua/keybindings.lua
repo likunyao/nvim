@@ -57,7 +57,7 @@ pluginKeys.gitsigns_on_attach = function(bufnr)
 
   map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>")
   map("n", "<leader>gu", gs.undo_stage_hunk)
-  map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>")
+  map("n", "<leader>gr", gs.reset_buffer)
   map("n", "<leader>gp", gs.preview_hunk)
   map("n", "<leader>gb", function()
     gs.blame_line({ full = true })

@@ -59,5 +59,10 @@ packer.startup({
     use("lewis6991/gitsigns.nvim")
     -- wakatime
     use("wakatime/vim-wakatime")
+    -- lualine
+    use({
+      "nvim-lualine/lualine.nvim",
+      requires = { "kyazdani42/nvim-web-devicons" },
+    })
   end
 })
