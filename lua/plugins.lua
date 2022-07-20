@@ -66,5 +66,10 @@ packer.startup({
     })
     -- autopairs
     use("windwp/nvim-autopairs")
+    -- toggleterm
+    use({
+      "akinsho/toggleterm.nvim",
+      tag = "v2.*"
+    })
   end
 })
