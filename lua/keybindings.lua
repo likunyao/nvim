@@ -24,6 +24,10 @@ pluginKeys.nvimTreeList = {
     { key = "R", action = "refresh" },
 }
 
+-- neogen
+map("n", "<leader><leader>d", ":Neogen<cr>", opt)
+map("n", "<leader><leader>f", ":Neogen file<cr>", opt)
+
 -- gitsigns
 pluginKeys.gitsigns_on_attach = function(bufnr)
   local gs = package.loaded.gitsigns

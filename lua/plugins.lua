@@ -71,5 +71,10 @@ packer.startup({
       "akinsho/toggleterm.nvim",
       tag = "v2.*"
     })
+    -- neogen
+    use({
+      "danymat/neogen",
+      requires = "nvim-treesitter/nvim-treesitter",
+    })
   end
 })
