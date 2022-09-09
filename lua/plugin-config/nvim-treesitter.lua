@@ -5,7 +5,7 @@ if not status then
 end
 
 treesitter.setup({
-  ensure_installed = {"bash", "c", "cpp", "make", "cmake", "python", "java"},
+  ensure_installed = {"bash", "c", "cpp", "make", "cmake", "python", "go"},
   highlight = {
     enable = true,
     custom_captures = {
