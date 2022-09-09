@@ -1,3 +1,12 @@
+local coc_pulgin_list = {"coc-prettier",
+                        "coc-sh",
+                        "coc-pyright",
+                        "coc-json",
+                        "coc-go",
+                        "coc-cmake",
+                        "coc-clangd"}
+vim.api.nvim_set_var('coc_global_extensions', coc_pulgin_list)
+
 local expr_opts = { noremap = true, silent = true, expr = true }
 
 vim.api.nvim_set_keymap("n", "gd", "<Plug>(coc-definition)", {silent = true})
