@@ -5,7 +5,16 @@ if not status then
 end
 
 treesitter.setup({
-  ensure_installed = {"bash", "c", "cpp", "make", "cmake", "python", "go", "lua"},
+  ensure_installed = {"bash",
+                     "c",
+                     "cpp",
+                     "make",
+                     "cmake",
+                     "python",
+                     "go",
+                     "lua",
+                     "sql",
+                     "yaml"},
   highlight = {
     enable = true,
     custom_captures = {
