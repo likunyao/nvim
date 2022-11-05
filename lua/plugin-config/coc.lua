@@ -35,6 +35,7 @@ keyset("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})
 
 -- Use `en` and `eN` to navigate diagnostics
 -- Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+keyset("n", "ea", ":CocDiagnostics<CR>", {silent = true})
 keyset("n", "eN", "<Plug>(coc-diagnostic-prev)", {silent = true})
 keyset("n", "en", "<Plug>(coc-diagnostic-next)", {silent = true})
 

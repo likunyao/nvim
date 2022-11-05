@@ -6,6 +6,8 @@ require("keybindings")
 require("plugins")
 -- 主题设置
 require("colorscheme")
+-- 自动命令
+require("autocmd")
 -- 插件配置
 require("plugin-config.nvim-treesitter")
 require("plugin-config.nvim-tree")
@@ -15,3 +17,4 @@ require("plugin-config.lualine")
 require("plugin-config.nvim-autopairs")
 require("plugin-config.toggleterm")
 require("plugin-config.neogen")
+require("plugin-config.telescope")
