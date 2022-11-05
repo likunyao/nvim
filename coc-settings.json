@@ -5,5 +5,6 @@
     "python.formatting.provider": "yapf",
     "python.analysis.extraPaths": [
         "conf"
-    ]
+    ],
+    "snippets.ultisnips.pythonPrompt": false
 }
