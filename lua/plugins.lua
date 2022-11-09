@@ -82,5 +82,7 @@ packer.startup({
     })
     use("LinArcX/telescope-env.nvim")
     use("nvim-telescope/telescope-ui-select.nvim")
+    --indent
+    use("lukas-reineke/indent-blankline.nvim")
   end
 })
