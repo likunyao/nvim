@@ -1,7 +1,7 @@
 {
     "diagnostic.warningSign": ">>",
     "coc.preferences.formatOnSave": true,
-    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.3/clangd_15.0.3/bin/clangd",
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd",
     "python.formatting.provider": "yapf",
     "python.formatting.yapfArgs": [
         "--style",
