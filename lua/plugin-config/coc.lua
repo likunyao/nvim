@@ -3,7 +3,6 @@ local coc_pulgin_list = {"coc-prettier",
                         "coc-pyright",
                         "coc-json",
                         "coc-go",
-                        "coc-cmake",
                         "coc-clangd",
                         "coc-snippets"}
 vim.api.nvim_set_var('coc_global_extensions', coc_pulgin_list)
