@@ -84,5 +84,12 @@ packer.startup({
     use("nvim-telescope/telescope-ui-select.nvim")
     --indent
     use("lukas-reineke/indent-blankline.nvim")
-  end
+  end,
+    config = {
+      display = {
+        open_fn = function()
+          return require('packer.util').float({ border = 'single' })
+        end
+      }
+    }
 })
