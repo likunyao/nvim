@@ -76,6 +76,7 @@ packer.startup({
       "danymat/neogen",
       requires = "nvim-treesitter/nvim-treesitter",
     })
+    -- telescope
     use({
       "nvim-telescope/telescope.nvim", branch = "0.1.x",
       requires = {'nvim-lua/plenary.nvim'}
@@ -84,6 +85,8 @@ packer.startup({
     use("nvim-telescope/telescope-ui-select.nvim")
     --indent
     use("lukas-reineke/indent-blankline.nvim")
+    --copilot
+    use("github/copilot.vim")
   end,
     config = {
       display = {
