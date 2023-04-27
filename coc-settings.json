@@ -5,5 +5,6 @@
   "python.formatting.provider": "black",
   "python.formatting.blackArgs": ["--skip-string-normalization"],
   "python.analysis.extraPaths": ["conf", "src"],
+  "go.goplsOptions": { "usePlaceholders": true },
   "snippets.ultisnips.pythonPrompt": false
 }
