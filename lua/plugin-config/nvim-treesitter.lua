@@ -14,7 +14,8 @@ treesitter.setup({
                      "go",
                      "lua",
                      "sql",
-                     "yaml"},
+                     "yaml",
+                     "java"},
   highlight = {
     enable = true,
     custom_captures = {
