@@ -87,6 +87,8 @@ packer.startup({
     use("lukas-reineke/indent-blankline.nvim")
     --copilot
     use("github/copilot.vim")
+    --leap
+    use("ggandor/leap.nvim")
   end,
     config = {
       display = {
