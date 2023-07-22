@@ -9,4 +9,13 @@ nvim_tree.setup({
     dotfiles = false,
     custom = {"*.pyc", "*.swp", ".git", ".cache"}
   },
+  diagnostics = {
+    enable = true,
+    icons = {
+      hint = "",
+      info = "",
+      warning = "",
+      error = ""
+    }
+  },
 })
