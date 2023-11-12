@@ -84,7 +84,7 @@ packer.startup({
     use("LinArcX/telescope-env.nvim")
     use("nvim-telescope/telescope-ui-select.nvim")
     --indent
-    use("lukas-reineke/indent-blankline.nvim")
+    use({"lukas-reineke/indent-blankline.nvim",tag = "v2.*"})
     --copilot
     use("github/copilot.vim")
     --leap
