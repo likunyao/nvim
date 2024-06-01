@@ -13,6 +13,7 @@ map("i", "jk", "<esc>", opt)
 map("n", "<leader><leader>i", ":PackerInstall<cr>", opt)
 map("n", "<leader><leader>s", ":PackerSync<cr>", opt)
 map("n", "<f12>", ":nohlsearch<cr>", opt)
+map("n", "<Leader>s", ":CocCommand clangd.switchSourceHeader<cr>", opt)
 
 -- 插件快捷键
 local pluginKeys = {}
