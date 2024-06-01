@@ -17,8 +17,12 @@ map("n", "<f12>", ":nohlsearch<cr>", opt)
 -- 插件快捷键
 local pluginKeys = {}
 
+--floatterm
+map("n", "tt", ":FloatermToggle<cr>", opt)
+
 -- nvim-tree
 map("n", "<f2>", ":NvimTreeToggle<cr>", opt)
+
 -- 列表快捷键
 pluginKeys.nvimTreeList = {
     { key = "R", action = "refresh" },
@@ -27,6 +31,7 @@ pluginKeys.nvimTreeList = {
 -- Telescope
 map("n", "ff", ":Telescope find_files<CR>", opt)
 map("n", "fg", ":Telescope live_grep<CR>", opt)
+
 -- Telescope 列表中 插入模式快捷键
 pluginKeys.telescopeList = {
   i = {

@@ -66,11 +66,8 @@ packer.startup({
     })
     -- autopairs
     use("windwp/nvim-autopairs")
-    -- toggleterm
-    use({
-      "akinsho/toggleterm.nvim",
-      tag = "v2.*"
-    })
+    -- floatterm
+    use("voldikss/vim-floaterm")
     -- neogen
     use({
       "danymat/neogen",
