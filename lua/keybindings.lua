@@ -20,6 +20,7 @@ local pluginKeys = {}
 
 --floatterm
 map("n", "tt", ":FloatermToggle<cr>", opt)
+map("t", "tt", "<c-\\><c-n>:FloatermToggle<cr>", opt)
 
 -- nvim-tree
 map("n", "<f2>", ":NvimTreeToggle<cr>", opt)
