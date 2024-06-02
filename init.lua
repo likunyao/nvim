@@ -9,6 +9,7 @@ require("colorscheme")
 -- 自动命令
 require("autocmd")
 -- 插件配置
+require("plugin-config.notify")
 require("plugin-config.nvim-treesitter")
 require("plugin-config.nvim-tree")
 require("plugin-config.coc")

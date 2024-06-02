@@ -68,6 +68,8 @@ packer.startup({
     use("windwp/nvim-autopairs")
     -- floatterm
     use("voldikss/vim-floaterm")
+    -- notify
+    use("rcarriga/nvim-notify")
     -- neogen
     use({
       "danymat/neogen",
