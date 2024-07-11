@@ -105,4 +105,7 @@ pluginKeys.gitsigns_on_attach = function(bufnr)
   map({ "o", "x" }, "ig", ":<C-U>Gitsigns select_hunk<CR>")
 end
 
+-- todo-comments
+map("n", "<leader>td", ":TodoTelescope<cr>", opt)
+
 return pluginKeys

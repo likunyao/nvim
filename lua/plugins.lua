@@ -88,6 +88,8 @@ packer.startup({
     use("github/copilot.vim")
     --leap
     use("ggandor/leap.nvim")
+    --todo-comments
+    use({"folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim"})
   end,
     config = {
       display = {
