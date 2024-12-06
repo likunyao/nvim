@@ -30,28 +30,6 @@ pluginKeys.nvimTreeList = {
     { key = "R", action = "refresh" },
 }
 
--- Telescope
-map("n", "ff", ":Telescope find_files<CR>", opt)
-map("n", "fg", ":Telescope live_grep<CR>", opt)
-
--- Telescope 列表中 插入模式快捷键
-pluginKeys.telescopeList = {
-  i = {
-    -- 上下移动
-    ["<C-j>"] = "move_selection_next",
-    ["<C-k>"] = "move_selection_previous",
-    -- 历史记录
-    ["<Down>"] = "cycle_history_next",
-    ["<Up>"] = "cycle_history_prev",
-    -- 关闭窗口
-    -- ["<esc>"] = actions.close,
-    ["<C-c>"] = "close",
-    -- 预览窗口上下滚动
-    ["<C-u>"] = "preview_scrolling_up",
-    ["<C-d>"] = "preview_scrolling_down",
-  },
-}
-
 -- neogen
 map("n", "<leader><leader>d", ":Neogen<cr>", opt)
 map("n", "<leader><leader>f", ":Neogen file<cr>", opt)
@@ -87,7 +65,6 @@ pluginKeys.gitsigns_on_attach = function(bufnr)
     return "<Ignore>"
   end, { expr = true })
 
-  map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>")
   map({'n', 'v'}, '<leader>gr', ':Gitsigns reset_hunk<CR>')
   map("n", "<leader>gu", gs.undo_stage_hunk)
   map("n", "<leader>gp", gs.preview_hunk)
