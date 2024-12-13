@@ -7,7 +7,7 @@ end
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', 'ff', builtin.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', 'fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', 'lf', builtin.treesitter, { desc = 'Telescope treesitter' })
+vim.keymap.set('n', '<leader>lf', builtin.treesitter, { desc = 'Telescope treesitter' })
 vim.keymap.set('n', '<leader>gs', builtin.git_status, { desc = 'git status' })
 vim.keymap.set('n', '<leader>gc', builtin.git_commits, { desc = 'git commits' })
 vim.keymap.set('n', 'fb', builtin.buffers, { desc = 'Telescope buffers' })
