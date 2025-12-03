@@ -4,7 +4,9 @@ local coc_pulgin_list = {"coc-prettier",
                         "coc-json",
                         "coc-go",
                         "coc-clangd",
-                        "coc-snippets"}
+                        "coc-snippets",
+                        "coc-tsserver",
+                        "coc-rust-analyzer",}
 vim.api.nvim_set_var('coc_global_extensions', coc_pulgin_list)
 
 local keyset = vim.keymap.set
