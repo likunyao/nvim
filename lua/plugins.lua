@@ -43,6 +43,7 @@ packer.startup({
     -- treesitter
     use({
       "nvim-treesitter/nvim-treesitter",
+      branch = "main",
       run = ":TSUpdate",
     })
     -- nvim-tree
@@ -56,7 +57,7 @@ packer.startup({
       branch = "release",
     })
     -- gitsigns
-    use({"lewis6991/gitsigns.nvim",tag="v0.9.0"})
+    use({"lewis6991/gitsigns.nvim",tag="v2.1.0"})
     -- wakatime
     use("wakatime/vim-wakatime")
     -- lualine
@@ -77,13 +78,13 @@ packer.startup({
     })
     -- telescope
     use({
-      "nvim-telescope/telescope.nvim", branch = "0.1.x",
+      "nvim-telescope/telescope.nvim", tag= "v0.2.1",
       requires = {'nvim-lua/plenary.nvim'}
     })
     use("LinArcX/telescope-env.nvim")
     use("nvim-telescope/telescope-ui-select.nvim")
     --indent
-    use({"lukas-reineke/indent-blankline.nvim",tag = "v2.*"})
+    use({"lukas-reineke/indent-blankline.nvim", tag = "v3.*"})
     --copilot
     use("github/copilot.vim")
     --leap

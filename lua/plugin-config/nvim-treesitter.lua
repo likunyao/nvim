@@ -1,31 +1,55 @@
-local status, treesitter = pcall(require, "nvim-treesitter.configs")
+local status, treesitter = pcall(require, "nvim-treesitter")
 if not status then
   vim.notify("没有找到 nvim-treesitter")
   return
 end
 
+local filetypes = {
+  "sh",
+  "bash",
+  "c",
+  "cpp",
+  "make",
+  "cmake",
+  "python",
+  "go",
+  "lua",
+  "sql",
+  "yaml",
+  "java",
+  "markdown",
+  "rust"
+}
+
+local installing = {}
+
 treesitter.setup({
-  ensure_installed = {"bash",
-                     "c",
-                     "cpp",
-                     "make",
-                     "cmake",
-                     "python",
-                     "go",
-                     "lua",
-                     "sql",
-                     "yaml",
-                     "java"},
-  highlight = {
-    enable = true,
-    custom_captures = {
-      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
-      ["foo.bar"] = "Identifier",
-    },
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
+  install_dir = vim.fn.stdpath("data") .. "/site",
+})
+
+local group = vim.api.nvim_create_augroup("myTreesitter", {
+  clear = true,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = group,
+  pattern = filetypes,
+  callback = function(args)
+    local filetype = vim.bo[args.buf].filetype
+    local lang = vim.treesitter.language.get_lang(filetype)
+    if lang == nil then
+      return
+    end
+
+    if not vim.treesitter.language.add(lang) then
+      local available = treesitter.get_available()
+      if not installing[lang] and vim.tbl_contains(available, lang) then
+        installing[lang] = true
+        treesitter.install(lang)
+      end
+      return
+    end
+
+    vim.treesitter.start(args.buf, lang)
+  end,
 })
